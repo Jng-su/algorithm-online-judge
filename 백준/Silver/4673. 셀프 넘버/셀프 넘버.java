@@ -1,27 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        boolean[] isSelfNumber = new boolean[10001];
-
+        boolean[] check = new boolean[10001];
         for (int i = 1; i <= 10000; i++) {
-            int dn = d(i);
-            if (dn <= 10000) {
-                isSelfNumber[dn] = true;
+            int num = i;
+
+            // 각 자릿수를 더하는 로직
+            char[] temp = String.valueOf(i).toCharArray();
+            for (char c : temp) {
+                num += c - '0';
+            }
+
+            if (num <= 10000) {
+                check[num] = true;
             }
         }
 
-        for (int i = 1; i <= 10000; i++) {
-            if (!isSelfNumber[i]) {
-                System.out.println(i);
-            }
+        for (int i = 1; i < check.length; i++) {
+            if (!check[i]) System.out.println(i);
         }
-    }
-
-    public static int d(int n) {
-        int sum = n;
-        while (n > 0) {
-            sum += n % 10;
-            n /= 10;
-        }
-        return sum;
     }
 }
