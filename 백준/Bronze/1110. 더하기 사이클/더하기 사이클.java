@@ -9,13 +9,7 @@ public class Main {
         int temp = originNum;
         int count = 0;
 
-        if (originNum==0) {
-            System.out.println(1);
-            return;
-        }
-       
         while (true) {
-
             int tens = temp / 10;
             int ones = temp % 10;
             int sumDigits = (tens + ones) % 10;
