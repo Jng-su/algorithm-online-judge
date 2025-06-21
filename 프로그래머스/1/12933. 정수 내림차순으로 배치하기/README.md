@@ -1,10 +1,10 @@
 # [level 1] 정수 내림차순으로 배치하기 - 12933 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12933?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12933) 
 
 ### 성능 요약
 
-메모리: 76.1 MB, 시간: 0.36 ms
+메모리: 88.6 MB, 시간: 0.64 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 6일 15:7:43
+2025년 06월 21일 14:46:43
 
 ### 문제 설명
 

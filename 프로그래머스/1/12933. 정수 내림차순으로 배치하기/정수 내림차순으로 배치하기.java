@@ -1,17 +1,18 @@
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
     public long solution(long n) {
-        String numStr = Long.toString(n);
-        char[] charArray = numStr.toCharArray();
-        Arrays.sort(charArray);
-        char[] reversedArray = new char[charArray.length];
-        for (int i = 0; i < charArray.length; i++) {
-            reversedArray[i] = charArray[charArray.length - 1 - i];
+        String str = String.valueOf(n);
+        int[] digits = new int[str.length()];
+        
+        for(int i=0; i<str.length(); i++) {
+            digits[i] = -(str.charAt(i) - '0');
         }
-        String resultStr = new String(reversedArray);
-        long answer = Long.parseLong(resultStr);
-
-        return answer;
+        Arrays.sort(digits);
+        
+        StringBuilder sb = new StringBuilder();
+        for(int digit : digits) sb.append(-digit);
+        
+        return Long.parseLong(sb.toString());
     }
 }
